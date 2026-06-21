@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service & Repair | Aremith Motors</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/aremith-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="images/aremith-logo.png" alt=""></span><span>Aremith Motors</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="showroom.html">Showroom</a><a href="parts.html">Parts Shop</a><a href="service.html" aria-current="page">Service & Repair</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero service-hero parallax" data-speed="0.2">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Reliable workshop</p>
+        <h1>Service & Repair</h1>
+        <p class="hero-copy">Accurate diagnostics, clear estimates, careful workmanship, and road-tested handover for different car brands.</p>
+      </div>
+    </section>
+    <section class="section-pad">
+      <div class="section-heading reveal"><p class="eyebrow">Workshop menu</p><h2>Mechanical, electrical, and general car care services.</h2></div>
+      <div class="feature-grid dense">
+        <article class="feature-card reveal"><span class="icon">DX</span><h3>Computer Diagnostics</h3><p>Fault scan, live data checks, sensor tests, and root-cause reporting.</p></article>
+        <article class="feature-card reveal"><span class="icon">EN</span><h3>Engine Service</h3><p>Oil service, cooling checks, belts, mounts, plugs, leaks, and tune-ups.</p></article>
+        <article class="feature-card reveal"><span class="icon">BR</span><h3>Brake & Suspension</h3><p>Pads, rotors, shocks, bushings, alignment, steering, and road noise fixes.</p></article>
+        <article class="feature-card reveal"><span class="icon">AC</span><h3>AC & Electrical</h3><p>Cooling faults, wiring, battery systems, lighting, alternators, and starters.</p></article>
+      </div>
+    </section>
+    <section class="section-pad muted">
+      <div class="pricing-grid">
+        <article class="price-card reveal"><h2>Basic Check</h2><p>Routine care for daily-use cars.</p><strong>From NGN 45,000</strong><ul><li>Oil and filter check</li><li>Fluid inspection</li><li>Tyre and brake report</li></ul></article>
+        <article class="price-card featured reveal"><h2>Full Service</h2><p>Diagnostic and service attention.</p><strong>From NGN 120,000</strong><ul><li>Computer scan</li><li>Engine bay inspection</li><li>Road test and report</li></ul></article>
+        <article class="price-card reveal"><h2>Major Repair</h2><p>For bigger faults and part replacement.</p><strong>Custom quote</strong><ul><li>Deep diagnosis</li><li>Parts sourcing</li><li>Repair plan and timeline</li></ul></article>
+      </div>
+    </section>
+    <section class="section-pad booking-wrap" id="booking">
+      <div class="section-heading reveal"><p class="eyebrow">Appointments</p><h2>Book a workshop slot.</h2></div>
+      <form class="form-panel reveal" data-form>
+        <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
+        <label>Phone number<input type="tel" name="phone" placeholder="08062161448 or 08118431718" required></label>
+        <label>Vehicle<input type="text" name="vehicle" placeholder="Toyota Camry, Honda Accord, Mercedes C300..." required></label>
+        <label>Preferred date<input type="date" name="date" required></label>
+        <label>Service type<select name="service"><option>Diagnostics</option><option>Routine service</option><option>Brake and suspension</option><option>AC or electrical</option><option>Major repair</option></select></label>
+        <label class="full">What is happening?<textarea name="message" rows="5" placeholder="Describe the issue, warning lights, sound, or service need."></textarea></label>
+        <button class="btn primary" type="submit">Request Booking</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><div><h2>Aremith Motors</h2><p>Repair work with clear checks and honest handover.</p></div><div class="footer-links"><a href="showroom.html">Showroom</a><a href="parts.html">Parts</a><a href="contact.html">Contact</a></div></footer>
+  <div class="whatsapp-float" aria-label="WhatsApp contact links">
+    <a href="https://wa.me/2348062161448?text=Hello%20Aremith%20Motors%2C%20I%20want%20to%20make%20an%20enquiry" target="_blank" rel="noopener">WhatsApp 1</a>
+    <a href="https://wa.me/2348118431718?text=Hello%20Aremith%20Motors%2C%20I%20want%20to%20make%20an%20enquiry" target="_blank" rel="noopener">WhatsApp 2</a>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

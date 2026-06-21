@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Matches your main branch on GitHub
+
+media_folder: "images/uploads" # Where your client's car photos will save
+public_folder: "/images/uploads"
+
+collections:
+  - name: "cars"
+    label: "Car Inventory"
+    folder: "data/cars" # Decap will create a file here for every car added
+    create: true # Gives client a "Add New Car" button
+    slug: "{{fields.title}}"
+    fields:
+      - { label: "Car Model/Name", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string", required: false }
+      - { label: "Car Image", name: "image", widget: "image" }
+      - { label: "Car Details/Description", name: "description", widget: "text" }

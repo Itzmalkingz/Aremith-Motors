@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showroom | Aremith Motors</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/aremith-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark"><img src="images/aremith-logo.png" alt=""></span><span>Aremith Motors</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="showroom.html" aria-current="page">Showroom</a>
+      <a href="parts.html">Parts Shop</a>
+      <a href="service.html">Service & Repair</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero showroom-hero parallax" data-speed="0.22">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Second-hand Mercedes-Benz inventory</p>
+        <h1>Showroom</h1>
+        <p class="hero-copy">Browse clean second-hand Mercedes-Benz cars with condition notes, document checks, and practical guidance before payment.</p>
+      </div>
+    </section>
+
+    <section class="section-pad inventory-section">
+      <div class="filter-panel reveal">
+        <label>Make
+          <select data-filter="make">
+            <option value="all">All makes</option>
+            <option value="mercedes">Mercedes-Benz</option>
+          </select>
+        </label>
+        <label>Body Type
+          <select data-filter="type">
+            <option value="all">All body types</option>
+            <option value="suv">SUV</option>
+            <option value="sedan">Sedan</option>
+          </select>
+        </label>
+        <label>Max Price
+          <select data-filter="price">
+            <option value="all">Any price</option>
+            <option value="25000000">Under NGN 25M</option>
+            <option value="35000000">Under NGN 35M</option>
+            <option value="55000000">Under NGN 55M</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="vehicle-grid" data-vehicle-grid>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="sedan" data-price="28500000">
+          <img class="crop-sedan-front" src="images/8426b41bbfeabfc52cee474bf597d4f8.jpg" alt="Silver Mercedes-Benz C-Class second-hand car">
+          <div><span class="tag">Second hand</span><h2>Mercedes-Benz C300</h2><p>Clean engine, AC working, neat black interior, documents available for inspection.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="sedan" data-price="33500000">
+          <img class="crop-sedan-rear" src="images/709995ad6a7781acd19f8a7ff990004b.jpg" alt="Grey Mercedes-Benz E-Class second-hand sedan">
+          <div><span class="tag">Fresh arrival</span><h2>Mercedes-Benz E300</h2><p>Sharp grey finish, leather seats, clean body, diagnostics checked.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="sedan" data-price="38000000">
+          <img class="crop-sedan-low" src="images/70b30702db527db2920804d96387f806.jpg" alt="White Mercedes-Benz AMG sedan second-hand car">
+          <div><span class="tag">AMG style</span><h2>Mercedes-Benz C-Class AMG Line</h2><p>Sport trim look, smooth gear, clean papers, and road-tested performance.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="sedan" data-price="42000000">
+          <img class="crop-sedan-low" src="images/9c9a438d05ef48ad2d1efb5d2ad7f495.jpg" alt="Blue Mercedes-Benz AMG second-hand sedan">
+          <div><span class="tag">Premium sedan</span><h2>Mercedes-Benz C43 AMG</h2><p>Blue finish, strong stance, clean cabin, and recently inspected condition.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="suv" data-price="54000000">
+          <img class="crop-suv" src="images/22fb7858f90a79c917a4a2efae786ce1.jpg" alt="White Mercedes-Benz GLE second-hand SUV">
+          <div><span class="tag">SUV</span><h2>Mercedes-Benz GLE Coupe</h2><p>Premium SUV, strong suspension, spacious cabin, and verified ownership papers.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+        <article class="vehicle-card reveal" data-make="mercedes" data-type="suv" data-price="33500000">
+          <img class="crop-suv" src="images/3493c71203bff244179e79666c9cc63c.jpg" alt="Red Mercedes-Benz second-hand SUV">
+          <div><span class="tag">SUV</span><h2>Mercedes-Benz ML350</h2><p>Bold red finish, comfortable interior, checked electronics, and duty support.</p><a class="vehicle-price" href="tel:08062161448">Call for price</a></div>
+        </article>
+      </div>
+      <p class="empty-state" data-empty-state>No vehicles match those filters. Adjust the selection and try again.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><h2>Aremith Motors</h2><p>Second-hand Mercedes-Benz cars inspected for confidence.</p></div>
+    <div class="footer-links"><a href="parts.html">Parts</a><a href="service.html">Repair</a><a href="contact.html">Contact</a></div>
+  </footer>
+  <div class="whatsapp-float" aria-label="WhatsApp contact links">
+    <a href="https://wa.me/2348062161448?text=Hello%20Aremith%20Motors%2C%20I%20want%20to%20make%20an%20enquiry" target="_blank" rel="noopener">WhatsApp 1</a>
+    <a href="https://wa.me/2348118431718?text=Hello%20Aremith%20Motors%2C%20I%20want%20to%20make%20an%20enquiry" target="_blank" rel="noopener">WhatsApp 2</a>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
