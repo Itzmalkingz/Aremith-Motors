@@ -122,6 +122,39 @@ function applyVehicleFilters() {
 
 filters.forEach((filter) => filter.addEventListener("change", applyVehicleFilters));
 
+const galleryButtons = document.querySelectorAll("[data-gallery-open]");
+const galleryCloseButtons = document.querySelectorAll("[data-gallery-close]");
+
+function closeGallery() {
+  document.querySelectorAll("[data-gallery-modal].is-open").forEach((modal) => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+  });
+  document.body.classList.remove("modal-open");
+}
+
+galleryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const galleryId = button.dataset.galleryOpen;
+    const modal = document.querySelector(`[data-gallery-modal="${galleryId}"]`);
+    if (!modal) return;
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  });
+});
+
+galleryCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeGallery);
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeGallery();
+  }
+});
+
 document.querySelectorAll("[data-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
