@@ -625,6 +625,17 @@ textarea:focus {
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
+.vehicle-card[role="button"],
+.vehicle-slide[role="button"] {
+  cursor: pointer;
+}
+
+.vehicle-card[role="button"]:focus-visible,
+.vehicle-slide[role="button"]:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
 .vehicle-card-featured {
   grid-column: auto;
 }
@@ -658,6 +669,7 @@ textarea:focus {
 
 .listing-collage img {
   height: 100%;
+  min-height: 0;
   object-fit: cover;
 }
 
@@ -1220,6 +1232,18 @@ textarea:focus {
   .listing-collage {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 210px 112px;
+    overflow: hidden;
+  }
+
+  .vehicle-card .listing-collage {
+    padding: 0;
+  }
+
+  .vehicle-card .listing-collage img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
   }
 
   .listing-collage img:first-child {
@@ -1284,20 +1308,31 @@ textarea:focus {
   }
 
   .carousel {
-    min-height: 610px;
-    overflow: hidden;
+    min-height: 0;
+    overflow: visible;
   }
 
   .vehicle-slide {
-    grid-template-rows: 260px minmax(0, 1fr);
+    position: relative;
+    display: none;
+    grid-template-rows: auto auto;
+    inset: auto;
+  }
+
+  .vehicle-slide.is-active {
+    display: grid;
   }
 
   .vehicle-slide img {
-    height: 260px;
+    height: auto;
+    max-height: 320px;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
   }
 
   .vehicle-slide div {
-    padding: 22px;
+    min-height: auto;
+    padding: 20px;
   }
 
   .vehicle-slide h3 {
@@ -1318,6 +1353,10 @@ textarea:focus {
     height: 240px;
   }
 
+  .vehicle-card .listing-collage img {
+    height: 100%;
+  }
+
   .feature-card,
   .vehicle-card div,
   .part-category,
@@ -1325,6 +1364,10 @@ textarea:focus {
   .contact-card,
   .values-stack article {
     padding: 18px;
+  }
+
+  .vehicle-card .listing-actions {
+    padding: 0;
   }
 
   .feature-card h3,
