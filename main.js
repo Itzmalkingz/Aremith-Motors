@@ -123,7 +123,17 @@ function applyVehicleFilters() {
 filters.forEach((filter) => filter.addEventListener("change", applyVehicleFilters));
 
 const galleryButtons = document.querySelectorAll("[data-gallery-open]");
+const galleryCards = document.querySelectorAll("[data-gallery-card]");
 const galleryCloseButtons = document.querySelectorAll("[data-gallery-close]");
+
+function openGallery(galleryId) {
+  const modal = document.querySelector(`[data-gallery-modal="${galleryId}"]`);
+  if (!modal) return;
+
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
 
 function closeGallery() {
   document.querySelectorAll("[data-gallery-modal].is-open").forEach((modal) => {
@@ -134,14 +144,23 @@ function closeGallery() {
 }
 
 galleryButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const galleryId = button.dataset.galleryOpen;
-    const modal = document.querySelector(`[data-gallery-modal="${galleryId}"]`);
-    if (!modal) return;
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    openGallery(button.dataset.galleryOpen);
+  });
+});
 
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
+galleryCards.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    openGallery(card.dataset.galleryCard);
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openGallery(card.dataset.galleryCard);
+    }
   });
 });
 
